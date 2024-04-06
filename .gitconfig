@@ -1,0 +1,7 @@
+[user]
+	name = dpway
+	email = dpway0@gmail.com
+[core]
+	editor = nano
+[init]
+	defaultBranch = main
