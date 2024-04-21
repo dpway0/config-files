@@ -13,10 +13,10 @@ sync-config() {
     return 1
   fi
 
-  PROJECT_DIR="$(dirname "$0")"
+  SCRIPTS_DIR="$(dirname "$0")"
 
   # Check if the project directory exists
-  if [ ! -d "$PROJECT_DIR" ]; then
+  if [ ! -d "$SCRIPTS_DIR" ]; then
     echo "Project directory does not exist. Please provide a valid path."
     return 1
   fi
@@ -31,15 +31,10 @@ sync-config() {
   fi
 
   # Copy the specified file into the project directory
-  cp "$FILE_TO_COPY" "$PROJECT_DIR"
+  cp "$FILE_TO_COPY" "$SCRIPTS_DIR"
 
   # Navigate to the project directory
-  cd "$PROJECT_DIR" || return
-
-  # Initialize a git repository if not already initialized
-  if [ ! -d .git ]; then
-    git init
-  fi
+  cd "$SCRIPTS_DIR" || return
 
   # Add the specified file to the staging area
   git add "$1"
@@ -48,5 +43,5 @@ sync-config() {
   git commit -m "Update $1 file"
 
   # Push changes to GitHub
-  git push origin master
+  git push
 }
