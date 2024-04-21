@@ -5,9 +5,9 @@ CASE_SENSITIVE="true"
 ENABLE_CORRECTION="true"
 
 plugins=(
-  git
-  zsh-autosuggestions
-  )
+git
+zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -28,3 +28,31 @@ alias gcm='git commit -m'
 alias gpsh='git push'
 alias gss='git status -s'
 alias gs='echo ""; echo "*********************************************"; echo -e "   DO NOT FORGET TO PULL BEFORE COMMITTING"; echo "*********************************************"; echo ""; git status'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# ------------------------
+# dpway
+# ------------------------
+export CONFIG_DIR="$HOME/Desktop/projects/github/config-files"
+
+# ------------------------
+# Source
+# ------------------------
+source "$CONFIG_DIR/sync-config.sh"
+
+# ------------------------
+# Export
+# ------------------------
+export PATH="$HOME/Desktop/tools/bin:$PATH"
+
+# ------------------------
+# Aliases
+# ------------------------
+alias nz="nano $HOME/.zshrc"
+alias cz="cat $HOME/.zshrc"
+alias sz="source $HOME/.zshrc"
+alias cdpj="cd $HOME/Desktop/projects"
+alias cdscr="cd $HOME/Desktop/projects/scripts"
