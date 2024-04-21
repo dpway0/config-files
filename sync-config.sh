@@ -13,7 +13,7 @@ sync-config() {
     return 1
   fi
 
-  SCRIPTS_DIR="$(dirname "$0")"
+  SCRIPTS_DIR="$CONFIG_DIR"
 
   # Check if the project directory exists
   if [ ! -d "$SCRIPTS_DIR" ]; then
