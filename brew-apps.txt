@@ -2,7 +2,6 @@ vlc
 keka
 kap
 keycastr
-iterm2
 visual-studio-code
 sublime-text
 ffmpeg
