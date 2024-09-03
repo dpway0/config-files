@@ -16,7 +16,7 @@ export EDITOR='nano'
 # -------
 # Aliases
 # -------
-alias l="ls" # List files in current directory
+#alias l="ls" # List files in current directory
 alias ll="ls -al" # List all files in current directory in long list format
 alias o="open ." # Open the current directory in Finder
 
@@ -56,3 +56,28 @@ alias cz="cat $HOME/.zshrc"
 alias sz="source $HOME/.zshrc"
 alias cdpj="cd $HOME/Desktop/projects"
 alias cdscr="cd $HOME/Desktop/projects/scripts"
+alias np=pnpm
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+alias bz="bat $HOME/.zshrc"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+eval "$(zoxide init zsh)"
+eval "$(mcfly init zsh)"
