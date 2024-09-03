@@ -3,3 +3,5 @@ hiddenbar
 stats
 time-out
 docker
+macfuse
+mounty

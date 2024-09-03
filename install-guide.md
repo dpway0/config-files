@@ -40,15 +40,10 @@ npm install -g lite-server http-server license gitconfig
 npm install -g npm
 ```
 
-## VSCode
-
-```bash
-cat vscode-extensions.txt| xargs -L1 code --install-extension
-```
-
 ## ZSH plugins
 
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # add to plugins in .zshrc: zsh-autosuggestions
 ```
+

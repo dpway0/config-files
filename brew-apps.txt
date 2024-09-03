@@ -9,3 +9,17 @@ imagemagick
 wget
 telnet
 tldr
+gromgit/fuse/ntfs-3g-mac
+ripgrep
+bat
+fd
+zoxide
+dust
+bottom
+mcfly
+procs
+gitui
+font-hack-nerd-font
+lsd
+rm-improved
+watchexec
